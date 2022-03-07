@@ -1,0 +1,7 @@
+{
+  "name": "cs-cordova-advanced-http",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

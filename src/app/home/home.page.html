@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Cat Facts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Cat Facts</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-list>
+  <ion-item *ngFor="let catFact of catFacts">{{catFact.text}}</ion-item>
+</ion-list>
+</ion-content>
