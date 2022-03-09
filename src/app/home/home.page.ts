@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Platform } from '@ionic/angular';
 import { ApiService } from '../api.service';
 import { CatFact } from '../cat-fact';
 
@@ -10,9 +11,10 @@ import { CatFact } from '../cat-fact';
 export class HomePage implements OnInit {
 
   catFacts: Array<CatFact>;
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private platform: Platform) {}
 
   async ngOnInit(): Promise<void> {
+    await this.platform.ready();
     this.catFacts = await this.apiService.getFacts();
   }
 
